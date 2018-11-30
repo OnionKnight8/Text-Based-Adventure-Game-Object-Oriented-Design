@@ -1,5 +1,7 @@
 package finalproject;
 
+import java.util.HashMap;
+
 /**
  *
  * @author Patrick Dooley
@@ -8,5 +10,55 @@ package finalproject;
  */
 public class Room {
     private String description;
+    private HashMap<String, Room> exits;
     
+    public Room(String description) {
+        this.description = description;
+        exits = new HashMap<String, Room>();
+    }
+    
+    /**
+     * Sets an exit to a room.
+     * @param direction
+     * @param neighbor 
+     */
+    public void setExit(String direction, Room neighbor) {
+        exits.put(direction, neighbor);
+    }
+    /**
+     * Return room in specified direction.
+     * @param direction
+     * @return Room
+     */
+    public Room getExit(String direction) {
+        return exits.get(direction);
+    }
+    
+    /**
+     * Gets the description of a room, used when entering a room.
+     * @return description defined in contructor.
+     */
+    public String getShortDescription() {
+        return description;
+    }
+    
+    /**
+     * Gets full description of a room, including exits the user can use.
+     * @return long description
+     */
+    public String getLongDescription() {
+        return("todo: put stuff here idiot" + getExitString());
+    }
+    
+    /**
+     * Returns a string including the exits a room has, for use with getLongDescription class.
+     * @return Exits: (Insert Exits)
+     */
+    private String getExitString() {
+        String exitString = "Exits:";
+        for(String exitName : exits.keySet()) {
+            exitString += " " + exitName;
+        }
+        return exitString;
+    }
 }

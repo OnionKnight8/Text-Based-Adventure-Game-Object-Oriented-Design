@@ -8,7 +8,7 @@ package finalproject;
  */
 public class QuitCommand extends Command {
     
-    public quitCommand() {
+    public QuitCommand() {
         super("quit");
     }
 }

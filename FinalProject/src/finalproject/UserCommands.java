@@ -19,7 +19,6 @@ public class UserCommands {
         commands.put(command.getName(), command);
         command = new QuitCommand();
         commands.put(command.getName(), command);
-        }
     }
     
     /**

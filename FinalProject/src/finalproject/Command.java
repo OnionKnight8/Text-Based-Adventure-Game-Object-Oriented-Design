@@ -2,7 +2,7 @@ package finalproject;
 
 /**
  *
- * @author Patrick
+ * @author Patrick Dooley
  * @date 11/13/2018
  * @description: Command interface. Based on Command.java by Michael Kolling, David J. Barns,
  * and Rodrigo Obando.
