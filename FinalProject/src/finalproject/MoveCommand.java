@@ -13,13 +13,14 @@ public class MoveCommand extends Command {
         super("move");
     }
     
-    public boolean execute() {
-        if(hasSecondWord()) {
-            String direction = getSecondWord();
-            player.walk(direction);
+    public boolean execute(Player player) {
+        if(hasTarget()) {
+            String direction = getTarget();
+            player.go(direction);
         }
         else {
             System.out.println("What direction do you want to move in?");
         }
+        return false;
     }
 }
