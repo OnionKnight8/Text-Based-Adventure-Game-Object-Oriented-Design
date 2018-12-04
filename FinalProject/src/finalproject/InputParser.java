@@ -6,7 +6,7 @@ import java.util.StringTokenizer;
 
 /**
  *
- * @author patrick
+ * @author Patrick Dooley
  * @date 12/03/2018
  * @description: Takes the user's input and parses it (ex: splits a two word command
  * into a command and target). Based on Parser.java by Michael Kolling, David J. Barnes, and

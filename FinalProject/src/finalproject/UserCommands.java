@@ -17,7 +17,11 @@ public class UserCommands {
         commands = new HashMap<String, Command>();
         Command command = new MoveCommand();
         commands.put(command.getName(), command);
+        command = new HelpCommand(this);
+        commands.put(command.getName(), command);
         command = new QuitCommand();
+        commands.put(command.getName(), command);
+        command = new BackCommand();
         commands.put(command.getName(), command);
     }
     
