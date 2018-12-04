@@ -34,17 +34,22 @@ public class Gui extends javax.swing.JPanel {
         outputArea = new javax.swing.JTextArea();
         inputArea = new javax.swing.JTextField();
 
+        setBackground(new java.awt.Color(0, 0, 0));
+        setForeground(new java.awt.Color(0, 0, 0));
         setMaximumSize(new java.awt.Dimension(640, 480));
         setMinimumSize(new java.awt.Dimension(640, 480));
         setPreferredSize(new java.awt.Dimension(640, 480));
 
         outputArea.setEditable(false);
+        outputArea.setBackground(new java.awt.Color(0, 0, 0));
         outputArea.setColumns(20);
+        outputArea.setForeground(new java.awt.Color(255, 255, 255));
         outputArea.setRows(5);
         outputArea.setToolTipText("This is where the game tells you what is happening.");
         jScrollPane1.setViewportView(outputArea);
 
-        inputArea.setText("Enter Commands Here");
+        inputArea.setBackground(new java.awt.Color(0, 0, 0));
+        inputArea.setForeground(new java.awt.Color(255, 255, 255));
         inputArea.setToolTipText("Enter your commands here.");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);

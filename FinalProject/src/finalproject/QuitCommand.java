@@ -14,6 +14,7 @@ public class QuitCommand extends Command {
     
     public boolean execute(Player player) {
         if(!hasTarget()) {
+            System.out.println("You decide to take the easy way out...");
             return true;
         }
         else {

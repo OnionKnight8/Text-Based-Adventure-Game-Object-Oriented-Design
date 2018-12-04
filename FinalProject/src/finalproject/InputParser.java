@@ -1,7 +1,5 @@
 package finalproject;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 /**
@@ -30,22 +28,13 @@ public class InputParser {
         this.commands = commands;
     }
     
-    public Command getCommand() {
-        String inputLine = "";
+    public Command getCommand(String userInput) {
         String word1;
         String word2;
         
         System.out.print("> ");
         
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        try{
-            inputLine = reader.readLine();
-        }
-        catch(java.io.IOException exc) {
-            System.out.println("Error reading input: " + exc.getMessage());
-        }
-        
-        StringTokenizer tokenizer = new StringTokenizer(inputLine);
+        StringTokenizer tokenizer = new StringTokenizer(userInput.toLowerCase());
         
         if(tokenizer.hasMoreTokens()) {
             word1 = tokenizer.nextToken();

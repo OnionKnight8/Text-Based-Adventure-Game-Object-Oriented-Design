@@ -33,9 +33,16 @@ public class Room {
     public Room getExit(String direction) {
         return exits.get(direction);
     }
+    /**
+     * For removing exits.
+     * @param direction 
+     */
+    public void removeExit(String direction) {
+        exits.remove(direction);
+    }
     
     /**
-     * Gets the description of a room, used when entering a room.
+     * Returns description without listing exits.
      * @return description defined in contructor.
      */
     public String getShortDescription() {
@@ -47,7 +54,7 @@ public class Room {
      * @return long description
      */
     public String getLongDescription() {
-        return("todo: put stuff here idiot" + getExitString());
+        return(description + "\n" + getExitString());
     }
     
     /**

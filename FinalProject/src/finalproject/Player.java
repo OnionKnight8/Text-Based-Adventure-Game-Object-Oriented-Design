@@ -42,6 +42,13 @@ public class Player {
     public void moveBack() {
         currentRoom = roomArchive.remove(0);
     }
+    /**
+     * Some events in the game cause the player to be unable to move back. This
+     * method clears the roomArchive so the back command cannot be used.
+     */
+    public void deleteArchive() {
+        roomArchive.clear();
+    }
     
     /**
      * Checks if the user can move back. (Only returns false once the user has

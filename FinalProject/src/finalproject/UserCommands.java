@@ -23,6 +23,8 @@ public class UserCommands {
         commands.put(command.getName(), command);
         command = new BackCommand();
         commands.put(command.getName(), command);
+        command = new LookCommand();
+        commands.put(command.getName(), command);
     }
     
     /**
@@ -41,6 +43,5 @@ public class UserCommands {
         for(String commandName : commands.keySet()) {
             System.out.println(commandName + "  ");
         }
-        System.out.println();
     }
 }
