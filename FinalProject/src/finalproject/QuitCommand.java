@@ -13,11 +13,11 @@ public class QuitCommand extends Command {
     }
     
     public boolean execute(Player player) {
-        if(getTarget() == null) {
+        if(!hasTarget()) {
             return true;
         }
         else {
-            System.out.println("You cannot quit that! (Try \"quit\" with no target if you want to exit the game.)");
+            System.out.println("You cannot quit that! (HINT: Enter \"quit\" with no target if you want to exit the game.)");
             return false;
         }
     }

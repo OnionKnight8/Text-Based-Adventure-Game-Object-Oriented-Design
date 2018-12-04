@@ -19,7 +19,7 @@ public class MoveCommand extends Command {
             player.go(direction);
         }
         else {
-            System.out.println("What direction do you want to move in?");
+            System.out.println("What direction do you want to move in? (HINT: Enter \"back\" followed by a direction to choose where you want to go.");
         }
         return false;
     }
