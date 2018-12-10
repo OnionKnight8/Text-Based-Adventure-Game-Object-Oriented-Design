@@ -11,7 +11,8 @@ public class FinalProject {
 
     public static void main(String[] args) throws Exception {
         GameManager game = new GameManager();
+        game.chooseDifficulty();
         game.play();
-        System.out.println("Thank you for playing!");
+        System.out.println("\nThank you for playing!");
     }
 }

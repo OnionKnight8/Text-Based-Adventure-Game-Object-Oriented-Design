@@ -17,6 +17,7 @@ public class BackCommand extends Command {
         if(player.canBack() && !hasTarget()) {
             System.out.println("You retrace your steps. Perhaps you missed something?");
             player.moveBack();
+            System.out.println(player.getCurrentRoom().getLongDescription());
         }
         else if(player.canBack() && hasTarget()) {
             System.out.println("You cannot go back to a specified room. (HINT: Enter \"back\" with no target to revisit your last location.");

@@ -32,7 +32,7 @@ public class HelpCommand extends Command {
         }
         else if(rand == 2) {
             flavorText = ("You are not sure where you are or how you got here. It appears to be some sort of dungeon, "
-                + "\nwith stone walls and a damp atmosphere. After a short rest, You decide to press onwards.");
+                + "\nAfter a short rest, You decide to press onwards.");
         }
         else if(rand == 3) {
             flavorText = ("The sound of footsteps echoes of the walls, louder than before. You immediately freeze, and the footsteps cease. "

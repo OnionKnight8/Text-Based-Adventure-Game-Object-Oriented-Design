@@ -17,13 +17,27 @@ public class UserCommands {
         commands = new HashMap<String, Command>();
         Command command = new MoveCommand();
         commands.put(command.getName(), command);
+        command = new LookCommand();
+        commands.put(command.getName(), command);
+        command = new PickupCommand();
+        commands.put(command.getName(), command);
+        command = new DropCommand();
+        commands.put(command.getName(), command);
+        command = new UseCommand();
+        commands.put(command.getName(), command);
+        command = new InspectCommand();
+        commands.put(command.getName(), command);
+        command = new SanityCommand();
+        commands.put(command.getName(), command);
+        command = new BackCommand();
+        commands.put(command.getName(), command);
         command = new HelpCommand(this);
         commands.put(command.getName(), command);
         command = new QuitCommand();
         commands.put(command.getName(), command);
-        command = new BackCommand();
-        commands.put(command.getName(), command);
-        command = new LookCommand();
+    }
+    
+    public void setCommand(Command command) {
         commands.put(command.getName(), command);
     }
     
